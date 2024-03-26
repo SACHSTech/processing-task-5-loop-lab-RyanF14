@@ -9,7 +9,7 @@ public class Sketch extends PApplet {
   public void settings() {
 	// put your size call here
     size(1200, 600);
-    noLoop();
+    //noLoop();
   }
 
   /** 
@@ -33,6 +33,7 @@ public class Sketch extends PApplet {
     stroke(255);
     line(50, 125, 70, 50);  
 */
+    
     draw_section_outlines();
     draw_section1();
     draw_section2();
@@ -43,7 +44,6 @@ public class Sketch extends PApplet {
     draw_section6();
     draw_section7();
     draw_section8();
-
     
   }
 
@@ -102,22 +102,26 @@ public class Sketch extends PApplet {
     int intY = 0;
 
   
-    for(int intRow = 0; intRow < 30; intRow++){
-      for(int intColumn = 0; intColumn < 30; intColumn++){
-        popMatrix();
-        intX = 300 + intRow*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intColumn*10; //Instead of zero, calculate the proper intY location using 'intColumn'
-        rect(intX+300, intY+300, 5, 5);
-        fill(255);
-        noStroke();
-       // for(int i = 0; i < 300; i+= 1){
-       
+    for(int intRow = 0; intRow < 30; intRow+=1){
+      for(int intColumn = 0; intColumn < 30; intColumn+=1){
         pushMatrix();
+        intX = 300 + intRow*10 + 5;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 300 + 3 + intColumn*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+        if(intRow % 2 == 0)
+          fill(255); 
+        else
+          fill(0);
+        
+          rect(intX, intY, 5, 5);
 
+       
+        //noStroke();
+       // for(int i = 0; i < 300; i+= 1){
+       popMatrix();
+     
 
        }
   }
-  popMatrix();
   }
   /**
    * Use the modulus operator and an if/else statement to select the color.
