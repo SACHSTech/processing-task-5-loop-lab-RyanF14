@@ -129,12 +129,59 @@ public class Sketch extends PApplet {
    */
   public void draw_section3(){
 
+    int intX = 0;
+    int intY = 0;
+
+    for(int intRow = 0; intRow < 30; intRow+=1){
+      for(int intColumn = 0; intColumn < 30; intColumn+=1){
+        pushMatrix();
+        intX = 300 + intRow*10 + 303;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 300 + 3 + intColumn*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+        if(intColumn % 2 == 0)
+          fill(0); 
+        else
+          fill(255);
+        
+          rect(intX, intY, 5, 5);
+          
+        popMatrix();
+     
+
+       }
+    }
+
   }
 
   /**
    * Use the modulus operator and just one 'if' statement to select the color.
    */
   public void draw_section4(){
+    
+    int intX = 300;
+    int intY = 300;
+
+    for(int intRow = 0; intRow < 30; intRow+=1){
+      for(int intColumn = 0; intColumn < 30; intColumn+=1){
+        pushMatrix();
+        intX = 300 + intRow*10 + 603;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 300 + 3 + intColumn*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+        if(intRow % 2 != 0)
+          fill(0); 
+        else
+          for(int t = 0; t < 260; t += 1){
+            if(intColumn % 2 != 0)
+              fill(255);
+            else
+              fill(0);
+          }
+        
+          rect(intX, intY, 5, 5);
+          
+        popMatrix();
+     
+
+       }
+    }
 
   }
 
