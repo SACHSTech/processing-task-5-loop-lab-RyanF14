@@ -238,10 +238,56 @@ public class Sketch extends PApplet {
   }
 
   public void draw_section7(){
+        //pushMatrix();
+        int intX = 0;
+        int intY = 0;
+    
+      
+        for(int intColumn = 0; intColumn < 30; intColumn++){     
+        for(int intRow = (30 - intColumn - 1); intRow >= 0; intRow--){
+          
+            
+            intX = 3 + (intRow)*10 + 600;  //Instead of zero, calculate the proper intX location using 'intRow'
+            intY = 0 + 3 + ((intColumn * 10)); //Instead of zero, calculate the proper intY location using 'intColumn'
+                
+            fill(255);
+            noStroke();
+            for(int i = 0; i < 10; i+= 1){
+            rect(intX, intY, 5, 5);
+            }
+    
+         // }
+        }
+        }
+        //popMatrix();
+      
+    
 
   }
   
   public void draw_section8(){
+       //pushMatrix();
+       int intX = 0;
+       int intY = 0;
+   
+     
+             
+       for(int intRow = 0; intRow < 30; intRow++){
+         for(int intColumn = (0 + intRow); intColumn >= 0; intColumn--){
+           
+           intX = 3 + (intRow)*10 + 900;  //Instead of zero, calculate the proper intX location using 'intRow'
+           intY = 0 + 3 + ((intColumn * 10)); //Instead of zero, calculate the proper intY location using 'intColumn'
+               
+           fill(255);
+           noStroke();
+           for(int i = 0; i < 10; i+= 1){
+           rect(intX, intY, 5, 5);
+           }
+   
+        // }
+       
+       }
+   }
 
   }
 
