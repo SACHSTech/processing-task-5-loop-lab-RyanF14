@@ -189,11 +189,52 @@ public class Sketch extends PApplet {
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
   public void draw_section5(){
+    //pushMatrix();
+    int intX = 0;
+    int intY = 0;
 
+  
+          
+    for(int intRow = 0; intRow < 30; intRow++){
+      for(int intColumn = (30 - intRow); intColumn < 30; intColumn++){
+        
+        intX = 3 + (intRow)*10;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 0 + 3 + ((intColumn * 10)); //Instead of zero, calculate the proper intY location using 'intColumn'
+            
+        fill(255);
+        noStroke();
+        for(int i = 0; i < 10; i+= 1){
+        rect(intX, intY, 5, 5);
+        }
+
+     // }
+    }
+    }
+    //popMatrix();
   }
 
   public void draw_section6(){
-
+      //pushMatrix();
+      int intX = 0;
+      int intY = 0;
+  
+    
+            
+      for(int intRow = 0; intRow < 30; intRow++){
+        for(int intColumn = (0 + intRow); intColumn < 30; intColumn++){
+          
+          intX = 3 + (intRow)*10 + 300;  //Instead of zero, calculate the proper intX location using 'intRow'
+          intY = 0 + 3 + ((intColumn * 10)); //Instead of zero, calculate the proper intY location using 'intColumn'
+              
+          fill(255);
+          noStroke();
+          for(int i = 0; i < 10; i+= 1){
+          rect(intX, intY, 5, 5);
+          }
+  
+       // }
+      }
+      }
   }
 
   public void draw_section7(){
